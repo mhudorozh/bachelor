@@ -1,0 +1,384 @@
+@import "mainpage.css" screen;
+@import "../codebase/dhtmlxgantt.css?v=20180227" screen;
+	
+form {
+	text-align: center; 
+	font-family:35pt/25pt Geneva, Arial, Helvetica, sans-serif;
+	color: #363636;
+}
+
+.button {
+	height: 50px;
+	width: 275px;    
+    font-weight: 700;
+    color: white;
+	margin-left: 400px;
+    text-decoration: none;
+    padding: .8em 1em calc(.8em + 3px);
+  	border:0 none;
+	border-radius: 3px;
+    background: rgb(64,199,129);
+    box-shadow: 0 -3px rgb(53,167,110) inset;
+    transition: 0.2s;
+	margin-bottom: 10px;
+} 
+.reference:hover, .button:hover { background: rgb(53, 167, 110); }
+
+.reference:active, .button:active {
+    background: rgb(33,147,90);
+    box-shadow: 0 3px rgb(33,147,90) inset;
+}
+
+.reference {
+	height: 45px;
+	width: 200px;    
+    font-weight: 700;
+    color: white;
+	margin-left: 400px;
+    text-decoration: none;
+    padding: .8em 1em calc(.8em + 3px);
+  	border:0 none;
+	border-radius: 3px;
+    background: rgb(64,199,129);
+    box-shadow: 0 -3px rgb(53,167,110) inset;
+    transition: 0.2s;
+	margin-bottom: 10px;
+}
+
+.input {
+	border: 1px solid #cccccc; 
+	border-radius: 5px; 
+	height: 36px; 
+	width: 275px; 
+	font-family: Tahoma; 
+	font-size: 15px;
+}
+
+.initiation {
+	border: 1px solid #cccccc; 
+	border-radius: 5px; 
+	height: 200px; 
+	width: 400px; 
+	font-family: Tahoma; 
+	font-size: 15px;
+}
+
+.prod_and_goal {
+	border: 1px solid #cccccc; 
+	border-radius: 5px; 
+	height: 120px; 
+	width: 400px; 
+	font-family: Tahoma; 
+	font-size: 15px;
+}
+
+.base {
+	width: 80%;
+	margin-left: 110px;
+	margin-top: 30px;
+}
+
+.base td {
+	padding: 4px 0;
+	font-size: 17px;
+}
+
+
+
+.base1 tr{
+	padding: 0 14px;
+}
+
+.base1 input {
+	width: 270px;
+}
+
+.listproject {
+
+	border-collapse: collapse;
+    border: 0px;
+	font-weight: 500;
+	font-size: 15pt;
+	margin-left: 25px;
+	width: 83%;
+	text-align:center;
+	margin-top: 20px;
+}
+
+.listproject td {
+	padding: 6px 0;
+	font-size: 13pt;
+}
+
+hr {
+	border: none; 
+	background-color: #DFE2E5;  
+	height: 2px; 
+	width: 45%;
+}
+
+.listproject tr  {
+	cursor:pointer;
+	}
+
+.listproject tr:hover {
+	background: #f3bd48; 
+	color: #fff; 
+}
+.tio {
+	border: 1px solid #cccccc; 
+	border-radius: 5px; 
+	height: 100px; 
+	width: 400px; 
+	font-family: Tahoma; 
+	font-size: 13px;
+}
+
+.tabs { width: 85%; padding: 0px; margin: 0 auto;}
+.tabs>input { display:none; }
+.tabs>div { display: none;
+    padding: 12px;
+    border: 1px solid #C0C0C0;
+    background: #FFFFFF;
+	/* height: 470px;*/
+}
+.tabs>label {
+    display: inline-block;
+    padding: 7px;
+    margin: 0 -5px -1px 0;
+    text-align: center;
+    color: #666666;
+    border: 1px solid #C0C0C0;
+    background: #E0E0E0;
+    cursor: pointer;
+}
+.tabs>input:checked + label {
+    color: #000000;
+    border: 1px solid #C0C0C0;
+    border-bottom: 1px solid #FFFFFF;
+    background: #FFFFFF;
+}
+#tab_1:checked ~ #txt_1,
+#tab_2:checked ~ #txt_2,
+#tab_3:checked ~ #txt_3,
+#tab_4:checked ~ #txt_4 { display: block; }
+
+.search {
+  /* устанавливаем необходимую ширину формы в зависимости от дизайна
+  ** форма без проблем растягивается */
+  width: 275px;
+
+  /* кнопку отправки будем позиционировать абсолютно,
+  ** поэтому необходимо это свойство */
+  position: relative;
+}
+
+.search input {
+  /* отключаем бордюры у инпутов */
+  border: none;
+}
+
+/* стили для поля ввода */
+.search .input {
+  /* растягиваем поле ввода на всю ширину формы */
+  width: 100%;
+
+  /* за счет верхнего (8px) и нижнего (9px) внутренних отступов
+  ** регулируем высоту формы
+  ** внутренний отступ справа (37px) делаем больше левого,
+  ** т.к. там будет размещена кнопка отправки	*/
+  padding: 8px 37px 9px 15px;
+
+  /* чтобы ширина поля ввода (100%) включала в себя внутренние отступы */
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  /* добавляем внутренние тени */
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.1), inset 0 1px 2px rgba(0,0,0,0.3);
+
+  /* закругляем углы */
+  border-radius: 5px;
+
+  background: #EEE;
+  font: 13px Tahoma, Arial, sans-serif;
+  color: #555;
+  outline: none;
+}
+
+/* меняем оформление поля ввода при фокусе */
+.search .input:focus {
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.2), inset 0 1px 2px rgba(0,0,0,0.4);
+  background: #E8E8E8;
+  color: #333;
+}
+
+/* оформляем кнопку отправки */
+.search .submit {
+  /* позиционируем кнопку абсолютно от правого края формы */
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 37px;
+
+  /* растягиваем кнопку на всю высоту формы */
+  height: 100%;
+
+  cursor: pointer;
+  background: url(../images/go.png) 50% no-repeat;
+
+  /* добавляем прозрачность кнопке отправки */
+  opacity: 0.5;
+}
+
+/* при наведении курсора меняем прозрачность кнопки отправки */
+.search .submit:hover {
+  opacity: 0.8;
+}
+
+/* данное свойство необходимо для того, чтобы в браузерах
+** Chrome и Safari можно было стилизовать инпуты */
+input[type="search"] {
+  -webkit-appearance: none;
+}
+.img {
+	width:45px;height:45px;
+	background-image: url(../images/file.png);
+}
+
+.img:hover {
+	width:48px;height:48px;
+	background-image: url(../images/file_big.png);
+}
+
+a.knopka_add {
+  color: #fff; /* цвет текста */
+  text-decoration: none; /* убирать подчёркивание у ссылок */
+  background: #58CF50; /* фон кнопки */
+  padding: .5em 2.2em; /* отступ от текста */
+  border-radius: 5px;
+} 
+a.knopka_add:hover { background: #7CF173; } /* при наведении курсора мышки */
+a.knopka_add:active { background: #36C72C; } /* при нажатии */
+
+
+a.knopka_delete {
+  color: #fff; /* цвет текста */
+  text-decoration: none; /* убирать подчёркивание у ссылок */
+  background: url(../images/delete.png) no-repeat rgb(212,75,56); /* фон кнопки */
+  padding: .58em 1.17em; /* отступ от текста */
+  border-radius: 50px;
+} 
+a.knopka_delete:hover { background: url(../images/delete.png) no-repeat rgb(232,95,76); } /* при наведении курсора мышки */
+a.knopka_delete:active { background: url(../images/delete.png) no-repeat rgb(152,15,0); } /* при нажатии */
+
+a.knopka_add_risk {
+  color: #fff; /* цвет текста */
+  text-decoration: none; /* убирать подчёркивание у ссылок */
+  background: url(../images/add.png) no-repeat #58CF50; /* фон кнопки */
+  padding: .58em 1.17em; /* отступ от текста */
+  border-radius: 50px;
+} 
+a.knopka_add_risk:hover { background: url(../images/add.png) no-repeat #7CF173;  } /* при наведении курсора мышки */
+a.knopka_add_risk:active { background: url(../images/add.png) no-repeat  #36C72C; } /* при нажатии */
+
+a.knopka_edit_risk {
+  color: #fff; /* цвет текста */
+  text-decoration: none; /* убирать подчёркивание у ссылок */
+  background: url(../images/edit.png) no-repeat #EA710E; /* фон кнопки */
+  padding: .58em 1.17em; /* отступ от текста */
+  border-radius: 50px;
+}
+
+a.knopka_edit_risk:hover { background: url(../images/edit.png) no-repeat #EB8A3B;  } /* при наведении курсора мышки */
+a.knopka_edit_risk:active { background: url(../images/edit.png) no-repeat  #C7600C; } /* при нажатии */
+
+.draggable {
+	  cursor: pointer;
+}
+
+.saveanddel {
+	width: 170px;
+	height: 30px;
+}
+
+.table_task tr {
+	cursor:pointer;
+	}
+	
+.table_task tr:hover {
+	background: #f3bd48; 
+	}
+	
+.nechet {
+	background: #EBEAF7
+}
+
+.nechet {
+	cursor:pointer;
+	}
+	
+.nechet:hover {
+	background: #f3bd48;  
+	}
+	
+#zatemnenie {
+        background: rgba(102, 102, 102, 0.5);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+      }
+      #okno {
+        width: 383px;
+        height: 280px;
+        text-align: center;
+        padding: 15px;
+        border: 2px solid #4662CA;
+        border-radius: 5px;
+        color: #0000cc;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        background: #fff;
+      }
+      #zatemnenie:target {display: block;}
+      .close {
+        display: inline-block;
+        border: 1px solid #0000cc;
+        color: #0000cc;
+        padding: 0 12px;
+        margin: 10px;
+        text-decoration: none;
+        background: #f2f2f2;
+        font-size: 14pt;
+        cursor:pointer;
+      }
+      .close:hover {background: #e6e6ff;}
+	  
+.add:hover { background: rgb(53, 167, 110); }
+
+.add:active {
+    background: rgb(33,147,90);
+    box-shadow: 0 3px rgb(33,147,90) inset;
+}
+
+.add {
+	height: 37px;
+	width: 135px;    
+    font-weight: 500;
+    color: white;
+	margin-left: 400px;
+    text-decoration: none;
+    padding: .8em 1em calc(.8em + 3px);
+  	border:0 none;
+	border-radius: 5px;
+    background: rgb(64,199,129);
+    transition: 0.2s;
+	margin-bottom: 10px;
+}
